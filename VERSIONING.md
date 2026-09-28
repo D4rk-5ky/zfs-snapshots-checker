@@ -2,9 +2,28 @@
 
 This project uses three-part versions and increments each created release by exactly `0.0.1`. After `x.y.99`, the next release rolls over to `x.(y+1).0`; for example, `0.0.99` becomes `0.1.0` rather than `0.0.100`.
 
-## 2.4.2
+## 2.4.3
 
 Current release.
+
+Code changes:
+
+- Fixed the interaction between `--only-non-sanoid` and `--write-destroy-script`. In 2.4.2, `--only-non-sanoid` filtered only displayed datasets while destroy-script generation still silently used the default `candidates` mode, which could write off-schedule weekly/monthly Sanoid snapshots.
+- When `--write-destroy-script` is used with `--only-non-sanoid` and no explicit `--write-destroy-script-mode`, the effective mode now becomes `non-sanoid`.
+- Preserved explicit mode control: `--write-destroy-script-mode candidates`, `non-sanoid`, or `both` always overrides the contextual default.
+- Preserved the existing default `candidates` mode when `--only-non-sanoid` is not present.
+- Ignore-list filtering remains upstream of classification, so ignored names such as `SnapBeforeWatchTower...` are still excluded from non-Sanoid output and destroy-script generation.
+- Updated the shared application version from `2.4.2` to `2.4.3`.
+
+Documentation/project-maintenance changes:
+
+- Updated `--help` so both `--only-non-sanoid` and `--write-destroy-script-mode` describe the contextual default clearly.
+- Updated `README.md` with the corrected interaction and an example matching the reported command.
+- Updated `commented_code_map.md` so the CLI behavior and `main()` orchestration description match the implementation.
+
+## 2.4.2
+
+Previous release.
 
 Code changes:
 
