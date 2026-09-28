@@ -19,7 +19,7 @@ SANOID_REGEX = re.compile(
 
 SNAP_TYPES = ("frequently", "hourly", "daily", "weekly", "monthly", "yearly")
 
-VERSION = "2.4.2"
+VERSION = "2.4.3"
 
 
 @dataclass
@@ -790,7 +790,10 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--only-non-sanoid",
         action="store_true",
-        help="Show only datasets containing non-Sanoid snapshots",
+        help=(
+            "Show only datasets containing non-Sanoid snapshots; when --write-destroy-script is used "
+            "without an explicit --write-destroy-script-mode, this also selects non-sanoid mode"
+        ),
     )
     parser.add_argument(
         "--only-offsched",
@@ -826,8 +829,11 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--write-destroy-script-mode",
         choices=("candidates", "non-sanoid", "both"),
-        default="candidates",
-        help="Choose what goes into the destroy script: likely cleanup candidates, non-Sanoid snapshots, or both",
+        default=None,
+        help=(
+            "Choose what goes into the destroy script: likely cleanup candidates, non-Sanoid snapshots, or both. "
+            "If omitted, defaults to non-sanoid with --only-non-sanoid; otherwise candidates"
+        ),
     )
     parser.add_argument(
         "--append-destroy-script",
@@ -863,7 +869,7 @@ def main() -> int:
         print(f"ERROR: missing {sanoid_conf}", file=sys.stderr)
         return 1
 
-    if args.write_destroy_script_mode != "candidates" and not args.write_destroy_script:
+    if args.write_destroy_script_mode is not None and not args.write_destroy_script:
         print(
             "ERROR: --write-destroy-script-mode requires --write-destroy-script",
             file=sys.stderr,
@@ -909,16 +915,19 @@ def main() -> int:
 
     if args.write_destroy_script:
         output_path = Path(args.write_destroy_script)
+        destroy_mode = args.write_destroy_script_mode or (
+            "non-sanoid" if args.only_non_sanoid else "candidates"
+        )
         count = write_destroy_script(
             output_path=output_path,
             results=results,
-            mode=args.write_destroy_script_mode,
+            mode=destroy_mode,
             append=args.append_destroy_script,
             dry_run_check=args.dry_run_destroy_check,
         )
         print(
             f"Wrote destroy script: {output_path} "
-            f"(mode={args.write_destroy_script_mode}, "
+            f"(mode={destroy_mode}, "
             f"dry_run_check={'on' if args.dry_run_destroy_check else 'off'}, "
             f"{count} active destroy commands)"
         )

@@ -50,7 +50,7 @@ This file maps the current `zfs-snapshots-checker.py` implementation. It explain
 | `print_result(result)` | Prints the human-readable policy/count/newest/finding report for one dataset. | Isolates presentation from analysis. |
 | `write_destroy_script(output_path, results, mode, append, dry_run_check)` | Selects candidate/non-Sanoid snapshots, optionally preflights existence/holds, writes active or commented `zfs destroy` lines, and returns the number of active commands. | Generates a reviewable cleanup artifact without executing destructive commands. |
 | `build_parser()` | Builds the complete `argparse` CLI, including version/help text, positional input, report filters, destroy-script controls, and safety epilog. | Keeps CLI definition centralized and makes `--help` authoritative. |
-| `main()` | Parses arguments, validates inputs, loads Sanoid files, resolves/analyzes each requested dataset, optionally writes a destroy script, then prints JSON or filtered text output and returns the process status. | Coordinates the program's existing top-level workflow while delegating specialized work to reusable functions. |
+| `main()` | Parses arguments, validates inputs, loads Sanoid files, resolves/analyzes each requested dataset, resolves the effective destroy-script mode (`non-sanoid` when `--only-non-sanoid` is used without an explicit mode, otherwise `candidates`), optionally writes a destroy script, then prints JSON or filtered text output and returns the process status. | Coordinates the program's existing top-level workflow while keeping explicit destroy-mode selection authoritative and making the non-Sanoid shortcut behave consistently. |
 
 ## CLI arguments and commands
 
@@ -68,14 +68,14 @@ python3 zfs-snapshots-checker.py DATASET_FILE --configdir DIR [OPTIONS]
 | `--show-ok` | Includes datasets with no findings in normal text output. |
 | `--only-stale` | Filters normal text output to stale/missing autosnap findings and errors. |
 | `--only-exceeds` | Filters to retention-count excess findings and errors. |
-| `--only-non-sanoid` | Filters to datasets with non-Sanoid snapshots and errors. |
+| `--only-non-sanoid` | Filters to datasets with non-Sanoid snapshots and errors; with `--write-destroy-script` and no explicit destroy mode, it also makes the effective mode `non-sanoid`. |
 | `--only-offsched` | Filters to off-schedule weekly/monthly Sanoid snapshots and errors. |
 | `--only-cleanup-candidates` | Filters to likely manual cleanup candidates and errors. |
 | `--only-dataset` | Takes a `DATASET` value and limits analysis to that exact dataset already present in the dataset file; with `--recursively`, descendants from that same file are included. |
 | `--recursively` | Requires `--only-dataset`; includes the selected dataset and descendant dataset names already listed in `dataset_file`. |
 | `--ignore-list-file` | Takes a `FILE`; each non-comment line is a case-sensitive literal substring matched against the snapshot name after `@`. Matching snapshots are excluded before all counting/report/destroy logic. |
 | `--write-destroy-script` | Takes a `FILE` path and writes selected destroy commands there for manual review; it never executes them. |
-| `--write-destroy-script-mode` | Takes `candidates`, `non-sanoid`, or `both`; `candidates` writes current manual cleanup candidates and is the default mode. |
+| `--write-destroy-script-mode` | Takes `candidates`, `non-sanoid`, or `both`. An explicit value always wins. If omitted, the effective mode is `non-sanoid` with `--only-non-sanoid`; otherwise it is `candidates`. |
 | `--append-destroy-script` | Appends when a destroy script is being written instead of replacing it. |
 | `--dry-run-destroy-check` | Preflights existence and holds before leaving generated destroy lines active. |
 | `--version` | Prints the shared `VERSION` and exits. |

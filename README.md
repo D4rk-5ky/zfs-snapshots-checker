@@ -144,6 +144,8 @@ Show datasets whose Sanoid snapshot counts exceed desired values, plus dataset e
 
 Show datasets containing snapshots that do not match the Sanoid naming format, plus dataset errors.
 
+When `--write-destroy-script` is also used **without** an explicit `--write-destroy-script-mode`, this flag also makes the destroy-script mode default to `non-sanoid`. This means the natural command `--write-destroy-script FILE --only-non-sanoid` writes only non-Sanoid snapshots, not Sanoid cleanup candidates.
+
 ### `--only-offsched`
 
 Show datasets containing weekly or monthly Sanoid snapshots outside the configured schedule, plus dataset errors.
@@ -191,6 +193,18 @@ python3 zfs-snapshots-checker.py datasets_file \
   --ignore-list-file snapshot_ignore_file.example
 ```
 
+Write only non-Sanoid snapshots while applying an ignore list:
+
+```bash
+python3 zfs-snapshots-checker.py datasets \
+  --configdir /etc/sanoid \
+  --ignore-list-file ignore-list \
+  --write-destroy-script candidates \
+  --only-non-sanoid
+```
+
+In this combination, `--only-non-sanoid` makes the implicit destroy-script mode `non-sanoid`, so off-schedule weekly/monthly Sanoid cleanup candidates are not written.
+
 ### `--write-destroy-script FILE`
 
 Write selected `zfs destroy` commands to a shell script. The checker never executes that script. Review every generated command before running anything.
@@ -203,9 +217,13 @@ Select what `--write-destroy-script` writes:
 - `non-sanoid` — snapshots that do not match the Sanoid naming format.
 - `both` — both groups.
 
-Default: `candidates`.
+Default behavior:
 
-A non-default mode is rejected unless `--write-destroy-script` is also supplied.
+- With `--only-non-sanoid`, the implicit mode is `non-sanoid`.
+- Otherwise, the implicit mode is `candidates`.
+- An explicitly supplied `--write-destroy-script-mode` always takes precedence.
+
+Any explicit `--write-destroy-script-mode` is rejected unless `--write-destroy-script` is also supplied.
 
 ### `--append-destroy-script`
 
