@@ -1,0 +1,10 @@
+# ZFS Snapshots Checker ignore-list example
+#
+# One case-sensitive substring per non-comment line.
+# A snapshot is ignored when its snapshot name contains any listed substring.
+# Matching is against the part after @, not the dataset name.
+# Blank lines and lines beginning with # are ignored.
+#
+# This ignores names such as:
+# SnapBeforeWatchTower-Date-2026-09-02_08_10_59
+SnapBeforeWatchTower

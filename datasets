@@ -1,0 +1,148 @@
+Storage
+Storage/Android
+Storage/Audiobooks
+Storage/Billeder
+Storage/Cyberlink
+Storage/DV Camcorder Backup
+Storage/Dokumenter
+Storage/Familie og Venner
+Storage/Fraps Recordings
+Storage/Game Recordings
+Storage/Google Fotos BackUp
+Storage/Hjemmet
+Storage/Hjemmet/Vester 819
+Storage/MOBAC
+Storage/Mia-Pigen og Bror-Mand
+Storage/Movie Projects
+Storage/Music
+Storage/OS
+Storage/OS/AI
+Storage/OS/AI/Image Upscale
+Storage/OS/AI/Image Upscale/Output
+Storage/OS/AI/Stable-Diffusion
+Storage/OS/Clone
+Storage/OS/FuchsiaOS
+Storage/OS/Linux
+Storage/OS/Linux/ARM
+Storage/OS/Linux/Linux ISO
+Storage/OS/Linux/PCs
+Storage/OS/Linux/PCs/Asus Z170 PRO GAMING Debian Proxmox
+Storage/OS/Linux/PCs/Asus Z170 PRO GAMING Debian Proxmox/Docker
+Storage/OS/Linux/PCs/Asus Z170 PRO GAMING Debian Proxmox/Docker/Ollama
+Storage/OS/Linux/PCs/Asus Z170 PRO GAMING Debian Proxmox/Docker/Stable-Diffusion
+Storage/OS/Linux/PCs/Asus Z170 PRO GAMING Debian Proxmox/Proxmox-Storage
+Storage/OS/Linux/PCs/AsusN14E
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage-SSD
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage-SSD/Files
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage-SSD/Files/CCTV
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/AudioBookShelf
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Beszel
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Code-Server
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Frigate
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Guacamole
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Heimdall
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/HomeAssistant
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Immich
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Joplin
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/MQTT
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Mealie
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Mstream
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/NGinx-Proxy-Manager
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/NextCloud
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Ollama
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/PhotoPrism
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/SyncThing
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/VaultWarden
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/WatchTower
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/Zigbee2MQTT
+Storage/OS/Linux/PCs/AsusN14E/AsusN14E-Storage/Docker/server-monitoring
+Storage/OS/Linux/PCs/MSI-Z170-Gaming-M7
+Storage/OS/Linux/PCs/Proxmox
+Storage/OS/Linux/PCs/Proxmox/Media
+Storage/OS/Linux/PCs/Proxmox/Media/OBS
+Storage/OS/Linux/PCs/RPI5-8GB
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/AudioBookShelf
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/Beszel
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/Code-Server
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/Guacamole
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/Heimdall
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/HomeAssistant
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/Immich
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/Joplin
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/MQTT
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/Mealie
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/Mstream
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/NGinx-Proxy-Manager
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/NextCloud
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/PhotoPrism
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/SyncThing
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/VaultWarden
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/WatchTower
+Storage/OS/Linux/PCs/RPI5-8GB/RPI5-Storage/Docker/Zigbee2MQTT
+Storage/OS/Linux/VPS
+Storage/OS/Linux/VPS/Oracle Cloud
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-ARM-4Cores-24GB
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-ARM-4Cores-24GB/Storage
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-ARM-4Cores-24GB/Storage/Docker
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-ARM-4Cores-24GB/Storage/Docker/Heimdall
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-ARM-4Cores-24GB/Storage/Docker/NGinx-Proxy-Manager
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-ARM-4Cores-24GB/Storage/Docker/NTFY
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-ARM-4Cores-24GB/Storage/Docker/Nebula
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-ARM-4Cores-24GB/Storage/Docker/NextCloud
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-ARM-4Cores-24GB/Storage/Docker/RustDesk
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-ARM-4Cores-24GB/Storage/Docker/WatchTower
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-Arm-4Cores-24GB-Izhankrag
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-Arm-4Cores-24GB-Izhankrag/Storage
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-Arm-4Cores-24GB-Izhankrag/Storage/Docker
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-Arm-4Cores-24GB-Izhankrag/Storage/Docker/NGinx-Proxy-Manager
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-Arm-4Cores-24GB-Izhankrag/Storage/Docker/NextCloud
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-Arm-4Cores-24GB-Izhankrag/Storage/Docker/Syncthing
+Storage/OS/Linux/VPS/Oracle Cloud/Oracle-Arm-4Cores-24GB-Izhankrag/Storage/Docker/WatchTower
+Storage/OS/MAC
+Storage/OS/MAC/IMAC-12.1-2011
+Storage/OS/MAC/IMAC-12.1-2011/gddrescue
+Storage/OS/Windows
+Storage/OS/Windows/ISOs
+Storage/OS/Windows/PCs
+Storage/OS/Windows/PCs/MSI-B250-PC-MATE
+Storage/OS/Youtube guides - raw footage
+Storage/PC-Support
+Storage/Pictures only
+Storage/Spil Ekstra
+Storage/Spil Save Games
+Storage/Syncthing
+Storage/Syncthing/Benchmarks
+Storage/Syncthing/Billeder
+Storage/Syncthing/Familie og Venner
+Storage/Syncthing/Familie og Venner/Mia
+Storage/Syncthing/Games
+Storage/Syncthing/Games/BattleNet
+Storage/Syncthing/Games/BattleNet/Starcraft II
+Storage/Syncthing/Games/BattleNet/Warcraft 3 Campains and Replays
+Storage/Syncthing/Games/Epic Games
+Storage/Syncthing/Games/Epic Games/DeathLoop Saved Games
+Storage/Syncthing/Ideas and Notes
+Storage/Syncthing/Ideas og Notes
+Storage/Syncthing/Mine PCer og Enheder
+Storage/Syncthing/Obsidian
+Storage/Syncthing/Obsidian Notes
+Storage/Syncthing/OneDrive
+Storage/Syncthing/OneDrive Dokumenter
+Storage/Syncthing/Online Shopping
+Storage/Syncthing/Phone Backup
+Storage/Syncthing/Phone Backup/SGS23Plus
+Storage/Syncthing/Phone Backup/SGTS4
+Storage/Syncthing/Programmer
+Storage/Syncthing/Programmer Apple
+Storage/Syncthing/Programming Windows
+Storage/Syncthing/Smart BackUp
+Storage/Syncthing/Syncthing
+Storage/Syncthing/Video Editing Software
+Storage/Syncthing/knowledge_database
+Storage/W10 Endelig
+Zvol-Experiment
+Zvol-Experiment/BTRFS-BackUp
