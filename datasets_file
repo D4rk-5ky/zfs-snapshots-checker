@@ -1,0 +1,10 @@
+# ZFS Snapshots Checker dataset list example
+#
+# Put one exact ZFS dataset name on each non-comment line.
+# Blank lines and lines beginning with # are ignored.
+# With --only-dataset ... --recursively, only descendant datasets listed in this file are selected.
+#
+# Examples (replace/remove these comments and add your own datasets):
+# Storage/Documents
+# Storage/Syncthing/Phone Backup
+# backup/host1
